@@ -1,0 +1,21 @@
+%effect{
+    transition: all 200ms ease-in-out;
+
+    &:hover{
+        filter: contrast(70%);
+    }
+}
+
+@mixin setFlex ($dir, $pos){
+    display: flex;
+    flex-direction: $dir;
+
+    @if $dir == column{
+        justify-content: $pos;
+        align-items: $pos;
+    }
+
+    @else{
+        justify-content: $pos;
+    }
+}

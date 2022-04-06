@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+@import url("https://fonts.googleapis.com/css2?family=Overpass&family=Playfair+Display+SC&family=Sacramento&display=swap");
+#mainPic img, #gallery figure {
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+#mainPic img:hover, #gallery figure:hover {
+  -webkit-filter: contrast(70%);
+          filter: contrast(70%);
+}
+
+.title-main {
+  font-size: 6rem;
+}
+
+.title-sub {
+  font-size: 3rem;
+}
+
+.title-main {
+  font-family: "Sacramento", cursive;
+}
+
+.title-sub {
+  font-family: "Playfair Display SC", serif;
+  padding-bottom: 1.5rem;
+}
+
+.text {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  text-align: center;
+  text-align: justify;
+}
+
+#contact {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: contact;
+  color: #50311F;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+#contact .via {
+  padding-bottom: 2rem;
+}
+
+#contact .via-list {
+  padding: 2rem;
+}
+
+#contact .via-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-family: "Overpass", sans-serif;
+  font-size: 2rem;
+  text-align: left;
+}
+
+#contact a {
+  color: #50311F;
+}
+
+#contact span {
+  font-size: 4.5rem;
+  margin: 0rem 1.5rem;
+  padding: 1rem;
+  color: #50311F;
+  border-radius: 25px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+#contact span:hover {
+  background-color: #50311F;
+  color: white;
+}
+
+.button {
+  padding: 0.7rem;
+  margin-top: 1.5rem;
+  border: 2px solid #50311F;
+  border-radius: 20px;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.button-full {
+  background-color: #50311F;
+  color: white;
+}
+
+.button-full:hover {
+  border: 2px solid #50311F;
+  background-color: white;
+  color: #50311F;
+}
+
+.button-empty {
+  color: #50311F;
+}
+
+.button-empty:hover {
+  border: 2px solid #50311F;
+  background-color: #50311F;
+  color: white;
+}
+
+#mainPic {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: mainPic;
+}
+
+#mainPic img {
+  width: 100%;
+}
+
+#gallery {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 1rem;
+}
+
+#gallery figure {
+  width: 100%;
+}
+
+#gallery figure img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#form {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: form;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form .formSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem;
+  width: 80%;
+}
+
+#form .formSection input {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border-color: #50311F;
+  padding: 0.5rem;
+  text-align: center;
+  width: 45%;
+}
+
+#form textarea {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border-color: #50311F;
+  width: 75%;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "mainTitle     mainPic"
+ "secondTitle   thirdTitle"
+ "contact       gallery"
+ "fourthTitle   form";
+}
+
+#mainTitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: mainTitle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #50311F;
+  padding: 3rem;
+}
+
+#secondTitle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: secondTitle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 3rem;
+}
+
+#thirdTitle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: thirdTitle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #50311F;
+  padding: 3rem;
+}
+
+#fourthTitle {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: fourthTitle;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  padding: 3rem;
+}
+
+@media all and (max-width: 700px) {
+  body {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "mainPic"
+ "mainTitle"
+ "secondTitle"
+ "thirdTitle"
+ "gallery"
+ "form"
+ "fourthTitle"
+ "contact";
+  }
+  #mainPic {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: mainPic;
+  }
+  #mainTitle {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: mainTitle;
+  }
+  #secondTitle {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: secondTitle;
+  }
+  #thirdTitle {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: thirdTitle;
+  }
+  #gallery {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: gallery;
+  }
+  #form {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: form;
+  }
+  #fourthTitle {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: fourthTitle;
+  }
+  #contact {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    grid-area: contact;
+  }
+}
+
+.back-brown {
+  background-color: #50311F;
+}
+
+.back-white {
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+#form{
+    grid-area: form;
+    @include setFlex(column, center);
+
+    .formSection{
+        @include setFlex(row, space-evenly);
+        padding: 1rem;
+        width: 80%;
+
+        input{
+            font-family: $pFont;
+            font-size: 1.5rem;
+            border-radius: 1rem;
+            border-color: $brown;
+            padding: 0.5rem;
+            text-align: center;
+            width: 45%;
+        }
+    }
+
+    textarea{
+        font-family: $pFont;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        border-color: $brown;
+        width: 75%;
+        padding: 1rem;
+        margin: 1rem;
+    }
+}

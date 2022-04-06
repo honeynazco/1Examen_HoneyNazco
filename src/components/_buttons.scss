@@ -1,0 +1,72 @@
+#contact{
+    grid-area: contact;
+    color: $brown;
+    text-align: center;
+    padding-top: 3rem;
+
+    .via{
+        padding-bottom: 2rem;
+
+        &-#{list}{
+            padding: 2rem;
+        }
+
+        &-#{link}{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-family: $pFont;
+            font-size: 2rem;
+            text-align: left;
+        }
+    }
+
+    a{
+        color: $brown;
+    }
+
+    span{
+        font-size: 4.5rem;
+        margin: 0rem 1.5rem;
+        padding: 1rem;
+        color: $brown;
+        border-radius: 25px;
+        transition: all 200ms ease-in-out;
+
+        &:hover{
+            background-color: $brown;
+            color: white;
+        }
+    }
+}
+
+.button{
+    padding: 0.7rem;
+    margin-top: 1.5rem;
+    border: 2px solid $brown;
+    border-radius: 20px;
+    font-family: $pFont;
+    font-size: 1.5rem;
+    transition: all 200ms ease-in-out;
+
+    &-#{full}{
+        background-color: $brown;
+        color: white;
+
+        &:hover{
+            border: 2px solid $brown;
+            background-color: white;
+            color: $brown;
+        }
+    }
+
+    &-#{empty}{
+        color: $brown;
+
+        &:hover{
+            border: 2px solid $brown;
+            background-color: $brown;
+            color: white;
+        }
+    }
+}

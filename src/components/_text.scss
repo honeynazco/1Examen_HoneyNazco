@@ -1,0 +1,28 @@
+.title{
+    $sizeKeys: map-keys($map: $titles);
+
+    @each $label in $sizeKeys{
+        $size: map-get($map: $titles, $key: $label);
+
+        &-#{$label}{
+            font-size: $size;
+        }
+    }
+
+    &-#{main}{
+        font-family: $mainFont;
+    }
+
+    &-#{sub}{
+        font-family: $subFont;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.text{
+    font-family: $pFont;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    text-align: center;
+    text-align: justify;
+}

@@ -1,0 +1,107 @@
+@import "config/variables";
+@import "config/general";
+@import 'components/text';
+@import 'components/buttons';
+@import 'components/images';
+@import 'components/form';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+@import url("https://fonts.googleapis.com/css2?family=Overpass&family=Playfair+Display+SC&family=Sacramento&display=swap");
+
+*{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:"mainTitle     mainPic"
+                        "secondTitle   thirdTitle"
+                        "contact       gallery"
+                        "fourthTitle   form";
+}
+
+#mainTitle{
+    grid-area: mainTitle;
+    @include setFlex(column, center);
+    color: $brown;
+    padding: 3rem;
+}
+
+#secondTitle{
+    grid-area: secondTitle;
+    @include setFlex(column, center);
+    color: white;
+    padding: 3rem;
+}
+
+#thirdTitle{
+    grid-area: thirdTitle;
+    @include setFlex(column, center);
+    color: $brown;
+    padding: 3rem;
+}
+
+#fourthTitle{
+    grid-area: fourthTitle;
+    @include setFlex(column, center);
+    color: white;
+    padding: 3rem;
+}
+
+@media all and (max-width:700px){
+    body{
+        grid-template-columns:100%;
+        grid-template-areas:"mainPic"
+                            "mainTitle"
+                            "secondTitle"
+                            "thirdTitle"
+                            "gallery"
+                            "form"
+                            "fourthTitle"
+                            "contact";
+    }
+
+    #mainPic{
+        grid-area: mainPic;
+    }
+
+    #mainTitle{
+        grid-area: mainTitle;
+    }
+
+    #secondTitle{
+        grid-area: secondTitle;
+    }
+
+    #thirdTitle{
+        grid-area: thirdTitle;
+    }
+
+    #gallery{
+        grid-area: gallery;
+    }
+
+    #form{
+        grid-area: form;
+    }
+
+    #fourthTitle{
+        grid-area: fourthTitle;
+    }
+
+    #contact{
+        grid-area: contact;
+    }
+}
+
+.back{
+    @each $area, $color in $background{
+        &-#{$area}{
+            background-color: $color;
+        }
+    }
+}
